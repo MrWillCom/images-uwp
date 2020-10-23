@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="Images.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Images"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+
+    <Image HorizontalAlignment="Center" VerticalAlignment="Center" Name="mainImg">
+        <Image.ContextFlyout>
+            <MenuFlyout>
+                <MenuFlyoutItem Text="Share" Icon="Share" />
+                <MenuFlyoutItem Text="Copy" Icon="Copy" />
+                <MenuFlyoutSeparator />
+                <MenuFlyoutItem Text="Rotate" Icon="Rotate" />
+                <MenuFlyoutItem Text="Print" Icon="Print" />
+                <MenuFlyoutSeparator />
+                <MenuFlyoutItem Text="Reveal in File Explorer" />
+                <MenuFlyoutItem Text="Show Details" />
+            </MenuFlyout>
+        </Image.ContextFlyout>
+    </Image>
+</Page>
