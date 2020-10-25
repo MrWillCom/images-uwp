@@ -20,11 +20,18 @@ namespace Images
         public MainPage()
         {
             this.InitializeComponent();
-
-            setImg("https://www.yangshangzhen.com/bing/wallpaper");
         }
 
-        public void setImg(string path)
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+            if (e.Parameter.GetType().Equals(typeof(string))) {
+                SetImage(e.Parameter.ToString());
+            }
+        }
+
+        public void SetImage(string path)
         {
             Windows.UI.Xaml.Media.Imaging.BitmapImage newImg = new Windows.UI.Xaml.Media.Imaging.BitmapImage();
             newImg.UriSource = new Uri(mainImg.BaseUri, path);
